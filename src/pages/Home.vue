@@ -48,7 +48,7 @@ function removeIngredient() {
 </template>
 
 <style lang='sass' scoped>
-@import '../assets/styles/main'
+@use '../assets/styles/variables' as *
 
 .select-wrapper
   padding-top: 50px

@@ -50,7 +50,8 @@ function goBack() {
 </template>
 
 <style lang='sass' scoped>
-@import '../assets/styles/main'
+@use 'sass:color'
+@use '../assets/styles/variables' as *
 
 .root
   display: flex
@@ -80,8 +81,8 @@ function goBack() {
 
   &:hover,
   &:active
-    background-color: darken($accent, 10%)
-    border-color: darken($accent, 10%)
+    background-color: color.adjust($accent, $lightness: -10%)
+    border-color: color.adjust($accent, $lightness: -10%)
 
 .btns
   display: flex

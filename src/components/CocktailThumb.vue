@@ -17,7 +17,7 @@ const props = defineProps({
 </template>
 
 <style lang='sass' scoped>
-@import '../assets/styles/main'
+@use '../assets/styles/main' as *
 .root 
   width: calc((100% - 76px)/3)
   margin-right: 38px

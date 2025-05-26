@@ -62,5 +62,5 @@ getCocktail()
 </template>
 
 <style lang='sass' scoped>
-@use '../assets/styles/main'
+@use '../assets/styles/main' as *
 </style>

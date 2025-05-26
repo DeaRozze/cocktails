@@ -56,7 +56,7 @@ getCocktail()
 </template>
 
 <style lang='sass' scoped>
-@import '../assets/styles/main'
+@use '../assets/styles/main' as *
 
 .slider
   padding: 50px 0
