@@ -6,7 +6,7 @@ import { ROUTES_PATHS } from '@/constants';
 
 const props = defineProps({
   imgUrl: {
-    tyoe: String,
+    type: String,
     required: true,
   },
   backFunc: {
