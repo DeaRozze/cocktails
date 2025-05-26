@@ -34,11 +34,21 @@ function goForCocktailRandom() {
 function goBack() {
   props.backFunc ? props.backFunc() : router.go(-1)
 }
+
+// Добавляем этот метод
+const getImageUrl = (path) => {
+  // Для продакшена (Vercel)
+  if (import.meta.env.PROD) {
+    return new URL(`/src/${path}`, import.meta.url).href
+  }
+  // Для разработки
+  return path
+}
 </script>
 
 <template>
   <div class="root">
-    <div :style='`background-image: url(${imgUrl})`' class="img"></div>
+    <div :style='`background-image: url(${ getImageUrl(imgUrl) })`' class="img"></div>
     <div class="main">
       <div class="btns">
         <el-button type="primary" :icon="Back" circle class="back" @click='goBack' v-if='isBackButtonVisible' />
